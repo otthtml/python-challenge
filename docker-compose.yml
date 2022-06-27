@@ -1,0 +1,13 @@
+version: '3'
+services:
+  server:
+    container_name: server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./server
+        target: /server
+    tty: true
+
